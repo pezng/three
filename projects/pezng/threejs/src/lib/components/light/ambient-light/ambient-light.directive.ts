@@ -4,7 +4,7 @@ import { AbstractObject3dDirective } from '../../../core/objects-3d/abstract-obj
 
 @Directive
   ({
-    selector: 'three-ambient-light',
+    selector: 'pez-ambient-light',
     providers: [{ provide: AbstractObject3dDirective, useExisting: forwardRef(() => AmbientLightDirective) }]
   })
 export class AmbientLightDirective extends AbstractObject3dDirective<AmbientLight> implements AfterViewInit {

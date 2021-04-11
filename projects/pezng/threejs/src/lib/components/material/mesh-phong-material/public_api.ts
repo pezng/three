@@ -1,1 +1,0 @@
-export * from './mesh-phong-material.directive';

@@ -16,12 +16,6 @@ export class PerspectiveCameraDirective extends AbstractCamera<PerspectiveCamera
   
   ngAfterViewInit() {
     this.object = new PerspectiveCamera(this.fov, this.aspect, this.near, this.far);
-    this.object.position.set(this.positionX, this.positionY, this.positionZ)
-    this.object.updateProjectionMatrix();
-  }
-
-  updateAspectRatio(aspect: number) {
-    this.object.aspect = aspect;
     this.object.updateProjectionMatrix();
   }
 }

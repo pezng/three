@@ -1,1 +1,1 @@
-export * from './public_api';
+export * from './sphere-buffer-geometry.directive';

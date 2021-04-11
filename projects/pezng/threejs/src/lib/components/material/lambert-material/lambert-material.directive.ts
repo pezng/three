@@ -5,7 +5,7 @@ import { AbstractMaterial } from '../../../core/models/abstract-material';
 
 @Directive
   ({
-    selector: 'three-lambert-material',
+    selector: 'pez-lambert-material',
     providers: [{ provide: AbstractMaterial, useExisting: forwardRef(() => LambertMaterialDirective) }]
   })
 export class LambertMaterialDirective extends AbstractMaterial<MeshLambertMaterial> implements AfterViewInit {

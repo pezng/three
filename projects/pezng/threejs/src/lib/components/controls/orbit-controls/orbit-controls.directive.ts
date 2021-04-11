@@ -12,13 +12,15 @@ export class OrbitControlsDirective implements AfterViewInit, OnDestroy {
 
   @Input() rotateSpeed = 1.0;
   @Input() zoomSpeed = 1.2;
+  @Input() maxDistance = 15000;
+  @Input() minDistance = 1;
 
   ngAfterViewInit(): void {
     this.object = new OrbitControls(this.camera.object, this.renderer.canvas);
     this.object.rotateSpeed = this.rotateSpeed;
     this.object.zoomSpeed = this.zoomSpeed;
-    this.object.maxDistance = 15000;
-    this.object.minDistance = 1;
+    this.object.maxDistance = this.maxDistance;
+    this.object.minDistance = this.minDistance;
   }
   ngOnDestroy() { this.object.dispose(); }
 }

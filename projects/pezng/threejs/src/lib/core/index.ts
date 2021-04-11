@@ -1,1 +1,3 @@
-export * from './public_api';
+export * from './models';
+export * from './objects-3d';
+export * from './utils';

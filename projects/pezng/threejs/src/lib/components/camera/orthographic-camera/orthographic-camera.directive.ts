@@ -17,12 +17,8 @@ export class OrthographicCameraDirective  extends AbstractCamera<OrthographicCam
 
   ngAfterViewInit() {
     this.object = new OrthographicCamera(this.left, this.right, this.top, this.bottom, this.near, this.far);
-    // this.object.position.set(this.positionX, this.positionY, this.positionZ)
     this.object.updateProjectionMatrix();
   }
 
-  updateAspectRatio(aspect: number) {
-    // this.object.aspect = aspect;
-    this.object.updateProjectionMatrix();
-  }
+  
 }

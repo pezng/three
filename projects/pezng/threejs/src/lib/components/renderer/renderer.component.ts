@@ -33,7 +33,7 @@ export class RendererComponent implements OnInit, AfterViewInit {
 
     window.addEventListener('resize', () => {
       this.renderer.setSize(window.innerWidth, window.innerHeight);
-      this.camera.updateAspectRatio(window.innerWidth / window.innerHeight);
+      // this.camera.updateAspectRatio(window.innerWidth / window.innerHeight);
     })
     // Observe a scene or a renderer
     if (typeof window.__THREE_DEVTOOLS__ !== 'undefined') {
