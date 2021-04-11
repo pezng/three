@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@pezng/threejs": {
+      "projectType": "library",
+      "root": "projects/pezng/threejs",
+      "sourceRoot": "projects/pezng/threejs/src",
+      "prefix": "pez",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/pezng/threejs/tsconfig.lib.json",
+            "project": "projects/pezng/threejs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pezng/threejs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pezng/threejs/src/test.ts",
+            "tsConfig": "projects/pezng/threejs/tsconfig.spec.json",
+            "karmaConfig": "projects/pezng/threejs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/pezng/threejs/**/*.ts",
+              "projects/pezng/threejs/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  },
+  "defaultProject": "@pezng/threejs"
 }
