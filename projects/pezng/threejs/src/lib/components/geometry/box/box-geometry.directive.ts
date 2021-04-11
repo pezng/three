@@ -28,6 +28,5 @@ export class BoxGeometryDirective extends AbstractGeometry<BoxGeometry> implemen
       this.heightSegments,
       this.depthSegments
     );
-    
   }
 }

@@ -1,1 +1,1 @@
-export * from './orthographic-camera.directive';
+export * from './stereo-camera.directive';

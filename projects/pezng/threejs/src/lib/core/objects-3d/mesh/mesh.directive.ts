@@ -1,5 +1,5 @@
 import { Directive, AfterViewInit, forwardRef, ContentChild, Input, ContentChildren, QueryList } from '@angular/core';
-import { Mesh, MeshBasicMaterial, MeshStandardMaterial, Vector3, Object3D } from 'three';
+import { Mesh } from 'three';
 import { AbstractGeometry } from '../../models/abstract-geometry';
 import { AbstractMaterial } from '../../models/abstract-material';
 import { AbstractObject3dDirective } from '../abstract-object-3d.directive';
@@ -27,14 +27,5 @@ export class MeshDirective extends AbstractObject3dDirective<Mesh> implements Af
 
     this.object = new Mesh(this.geometry.object, this.material.object);
     super.ngAfterViewInit();
-
-    
-    if(this.mesh.length) {
-        const sat = this.mesh.first;
-        // sat.object.position.set(0, 0.55, 0);
-
-    }
-
-
   }
 }

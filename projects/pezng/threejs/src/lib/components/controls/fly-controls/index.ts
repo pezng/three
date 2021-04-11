@@ -1,1 +1,1 @@
-export * from './orbit-controls.directive';
+export * from './fly-controls.directive';
